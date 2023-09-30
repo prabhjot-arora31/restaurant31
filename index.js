@@ -40,13 +40,16 @@ document.querySelector("#cross").addEventListener("click", function () {
 //   });
 //   observer.observe(document.querySelector("#yo"));
 // }
+var side_bar = document.querySelector(".side_bar");
 window.addEventListener("scroll", function anything() {
   var scrollpositions = window.scrollY;
   var scrollThreshold = 240;
   if (scrollpositions > scrollThreshold) {
     document.querySelector("#yo").classList.add("show");
     // document.querySelector("#yo").classList.remove("hide");
+    side_bar.style.display = "none";
   } else {
+    side_bar.style.display = "flex";
     document.querySelector("#yo").classList.add("hide");
     document.querySelector("#yo").classList.remove("show");
   }
